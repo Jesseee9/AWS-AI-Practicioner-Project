@@ -83,12 +83,11 @@ The app was tested across five diverse scenarios to verify it adapts properly to
 |------|-------|----------------|-------------------|--------|
 | 1 | User cannot open Outlook, shows disconnected, Teams won't load, others unaffected | Email & Collaboration | P3 Medium | ✅ Correctly classified as P3, single user impact |
 | 2 | Entire office lost internet 20 minutes ago, all devices including Wi-Fi phones affected | Network & Connectivity | P1 Critical | ✅ Correctly classified as P1, organisation-wide impact |
-| 3 | SharePoint gives 403 error on HR folder | Email & Collaboration | P3 Medium | To be tested |
-| 4 | Laptop extremely slow since Windows update | Windows OS | P3 Medium | To be tested |
-| 5 | External emails bouncing back, clients complaining | Email & Collaboration | P2 High | To be tested |
+| 3 | 403 forbidden error accessing HR folder on SharePoint, other sites work fine | Email & Collaboration | P3 Medium | ✅ Correctly classified as P3, single user, permissions-based diagnosis |
+| 4 | Laptop extremely slow since Windows update last night, freezing intermittently | Windows OS | P3 Medium | ✅ Correctly classified as P3, single user, update-related diagnosis |
+| 5 | External emails bouncing back, internal emails working, clients complaining | Email & Collaboration | P2 High | ✅ Correctly classified as P2, organisation-wide external communication impact |
 
 **Key finding:** The app does not produce generic responses. The entire output structure, including commands, escalation paths, and workarounds, adapts completely based on the scenario.
-
 ---
 
 ## App vs Chatbot Comparison
@@ -143,7 +142,6 @@ I'm working towards my first IT support role or Level 3 apprenticeship, and I wa
 ## Built With
 
 - **[AWS PartyRock](https://partyrock.aws)** — Amazon Bedrock Playground
-- **Claude Sonnet** — Foundation model powering both outputs
 - **Amazon Bedrock** — Underlying infrastructure for model access
 
 ---
